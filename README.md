@@ -27,3 +27,5 @@ pnpm i
 ```shell
 pnpm start
 ```
+
+It is not allowed to use or distribute this software by any member of this repository, the rights of use are exclusive to Diego Gaston Arias Galeano.
