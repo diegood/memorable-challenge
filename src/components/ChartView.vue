@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted, defineEmits } from 'vue'
+    import { ref, onMounted } from 'vue'
     import { LineChart } from 'vue-chart-3';
     import { Chart, registerables } from "chart.js";
     import {optionsConfig, datasetConfig} from '@/config/char'

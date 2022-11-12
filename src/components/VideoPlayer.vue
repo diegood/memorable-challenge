@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <video ref="video" src="https://tech-test-assets.s3.us-east-1.amazonaws.com/01FFRMDAHHCXC4CJG2DSST93S8.mp4"></video>
+    <div class="px-4 mt-4">
+        <video ref="video" :src="prop.video"></video>
     </div>
 </template>
 
 <script setup>
 import { watch, ref } from "vue";
 
-const prop = defineProps({ goTo: Number })
+const prop = defineProps({ goTo: Number, video: {type: String, required: true} })
 const video = ref(null)
 
 watch(() => prop.goTo, (newPosition)=>{

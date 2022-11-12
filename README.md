@@ -1,7 +1,29 @@
-# Vue 3 + Vite
+# Memorable Challenge
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# The technologies used in this project are:
 
-## Recommended IDE Setup
+- Main
+  - [vite](https://vitejs.dev/guide/) Builder
+  - [vue3](https://vuejs.org/guide/quick-start.html) framework
+- libreries
+  - [chartjs](https://www.chartjs.org/) char library
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## prerequisites
+
+- pnpm
+- node v16.18.0 (pnpm 7.15.0) or higher
+- web browser with ES5 or higher
+
+## how run this project?
+
+1. install dependencies
+
+```shell
+pnpm i
+```
+
+2. run project
+
+```shell
+pnpm start
+```

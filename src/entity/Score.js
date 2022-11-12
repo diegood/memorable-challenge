@@ -1,20 +1,18 @@
-const SCORE_TYPE = {
-    IMAGE: 0,
-    VIDEO: 1,
-}
-export class Score{
+import SCORE_TYPE from '@/constants/SCORE_TYPE.js'
+export class Score {
     constructor(json){
         try {
             this.id = json.id
             this.ulid = json.ulid
             this.name = json.name
+            this.client = json.name.split('_')[0]
             this.date = json.date
             this.description = json.description
             this.contenURL = json.url_original
             this.type = json.type
             this.sector = json.sector
-            this.global_txt_sal = json.global_txt_sal
-            this.scoreM1 = json.scoreM1
+            this.txtSal = json.global_txt_sal
+            this.scoreM1 = json.perc_score_m1
             this.scoreM2 = json.perc_score_m2
             this.scoreM3 = json.perc_score_m3
             if(this.type === SCORE_TYPE.VIDEO){
@@ -33,7 +31,7 @@ export class Score{
     }
 
     get totalScore(){
-        return this._calculateAverange([this.scoreM1 + this.scoreM2 + this.scoreM2])
+        return this._calculateAverange([this.scoreM1, this.scoreM2, this.scoreM2])
     }
 
     get scoreByFrame(){

@@ -14,12 +14,14 @@ specifiers:
   vite-plugin-eslint: ^1.8.1
   vue: ^3.2.45
   vue-chart-3: ^3.1.8
+  vue-debounce: ^4.0.0
   vue3-charts: ^1.1.31
 
 dependencies:
   chart.js: 3.9.1
   vue: 3.2.45
   vue-chart-3: 3.1.8_chart.js@3.9.1+vue@3.2.45
+  vue-debounce: 4.0.0_vue@3.2.45
   vue3-charts: 1.1.31_vue@3.2.45
 
 devDependencies:
@@ -1677,6 +1679,14 @@ packages:
       chart.js: 3.9.1
       csstype: 3.1.1
       lodash-es: 4.17.21
+      vue: 3.2.45
+    dev: false
+
+  /vue-debounce/4.0.0_vue@3.2.45:
+    resolution: {integrity: sha512-+BrcKfLpyDpUJ58ZrAvI35irRCgYHFpnF3NJZwwaz8/kkKmEq6TWPXBIhLh2HQAsUZNwo52K/vQyiEFsJ/1RYA==}
+    peerDependencies:
+      vue: '>= 2.0.0'
+    dependencies:
       vue: 3.2.45
     dev: false
 

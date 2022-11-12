@@ -1,18 +1,28 @@
 
 <template>
-  <h1>Memorable challenge</h1>
-  <memorable-card :score="scores"/>
+  <div class="flex flex-col gap-4 bg-gray-50">
+    <NavBar :scores="scores" @on-seach="onSearchGandler"/>
+    <section v-if="scores" class="pt-8 px-4 md:px-10 mx-auto w-full mt-20">
+      <FilteredList :scores="filteredSCores" :clients="clients"/>
+    </section>
+  </div>
 </template>
 
 <script setup>
 import {onMounted, ref} from 'vue'
-import MemorableCard from './components/MemorableCard.vue';
+import NavBar from './components/NavBar.vue';
+import FilteredList from './components/FilteredList.vue'
 import api from './services/techtest'
 
-const scores = ref([])
+const scores = ref(null)
+const filteredSCores = ref([])
+
+function onSearchGandler(newScoreList){
+  filteredSCores.value = newScoreList
+}
 
 onMounted(async () =>{
-  const score = await api.getScores()
-  scores.value = score[0]
+  scores.value = await api.getScores()
+  filteredSCores.value = scores.value
 })
 </script>

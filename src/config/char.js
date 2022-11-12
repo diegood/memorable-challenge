@@ -19,6 +19,6 @@ export const datasetConfig = {
     borderColor: '#77CEFBFF',
     pointBackgroundColor: '#77CEFFFF',
     fill: true,
-    pointRadius: 10,
+    pointRadius: 5,
     pointHoverRadius: 15
 }
