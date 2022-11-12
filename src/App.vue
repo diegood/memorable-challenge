@@ -1,14 +1,12 @@
 
 <template>
   <h1>Memorable challenge</h1>
-  <video-player></video-player>
-  <chart-view v-if="scores.scoreBySeconds" :values="scores.scoreBySeconds"></chart-view>
+  <memorable-card :score="scores"/>
 </template>
 
 <script setup>
 import {onMounted, ref} from 'vue'
-import VideoPlayer from './components/VideoPlayer.vue';
-import ChartView from './components/ChartView.vue';
+import MemorableCard from './components/MemorableCard.vue';
 import api from './services/techtest'
 
 const scores = ref([])

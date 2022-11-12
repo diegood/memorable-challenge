@@ -10,6 +10,9 @@ module.exports = {
   rules: {
     "vue/no-unused-vars": "off",
     "vue/require-default-prop": "off",
-    "no-debugger":"off"
+    "no-debugger":"off",
+    "vue/v-on-event-hyphenation": ["always", {
+      "autofix": true,
+    }]
   }
 }
