@@ -12,7 +12,8 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue3-charts": "^1.1.31"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
