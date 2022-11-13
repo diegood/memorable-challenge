@@ -1,8 +1,8 @@
 <template>
-    <div v-if="score.scoreBySeconds" class="flex flex-col max-w-fit rounded-xl shadow-md">
+    <div v-if="score.scoreBySeconds" class="flex flex-col max-w-full md:max-w-fit rounded-xl shadow-md">
         <h5 class="-mb-8 z-10 w-full flex justify-center"><a :href="score.contenURL" target="_blank" class="bg-gray-100 px-3 rounded-full">{{score.name}}</a></h5>
         <div>
-            <video-player :video="score.contenURL" :go-to="selectedSecond" class="max-w-96"/>
+            <video-player :video="score.contenURL" :go-to="selectedSecond" class="max-w-full md:max-w-96"/>
             <chart-view :values="score.scoreBySeconds" class="h-32 w-full -mt-28"  @time-selected="timedSelectedHandler"/>
         </div>
         <div class="grid grid-cols-3 gap-4 h-24 place-content-center justify-items-center">

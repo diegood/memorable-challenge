@@ -1,8 +1,8 @@
 <template>
-    <div class="flex justify-between">
-        <div>
-            <button class="bg-gray-200 px-4 rounded-l-full border-r-2 border-gray-400 hover:bg-slate-300" @click="changeType(SCORE_TYPE.VIDEO)">Videos</button>
-            <button class="bg-gray-200 px-4 rounded-r-full border-gray-400 hover:bg-slate-300" @click="changeType(SCORE_TYPE.IMAGE)">Images</button>
+    <div class="flex gap-4 md:flex-row md:justify-between flex-col-reverse">
+        <div class="w-full md:w-auto">
+            <button class="w-1/2 bg-gray-200 px-4 md:rounded-l-full border-r-2 border-gray-400 hover:bg-slate-300" :class="{'bg-green-300' : selectedType == SCORE_TYPE.VIDEO }" @click="changeType(SCORE_TYPE.VIDEO)">Videos</button>
+            <button class="w-1/2 bg-gray-200 px-4 md:rounded-r-full border-gray-400 hover:bg-slate-300" :class="{'bg-green-300' : selectedType == SCORE_TYPE.IMAGE }" @click="changeType(SCORE_TYPE.IMAGE)">Images</button>
         </div>
         <div class="flex gap-2"> 
             <label for="client">Selected Client</label>
@@ -11,7 +11,7 @@
             </select>
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-4 mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
         <div v-for="score in filteredScores" :key="score.ulid" class="card">
             <memorable-video-card v-if="selectedType == SCORE_TYPE.VIDEO"  :score="score"/>
             <memorable-image-card v-else :score="score" />
